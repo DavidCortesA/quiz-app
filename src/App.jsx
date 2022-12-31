@@ -67,7 +67,7 @@ function App() {
         </div>
         <button onClick={()=>{
           if(preguntaActual == preguntas.length - 1){
-            window.location.href = "/";
+            window.location.href = "/quiz-app/";
           }else{
             setPreguntaActual(preguntaActual + 1);
           }
