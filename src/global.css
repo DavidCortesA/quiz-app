@@ -29,6 +29,18 @@ body {
   gap: 50px;
 }
 
+@media (max-width: 750px) {
+  .app{
+    flex-direction: column;
+  }
+  .centro {
+    gap: 50px;
+  }
+  .juego-terminado, .lado-izquierdo{
+    gap:25px;
+  }
+}
+
 /* PREGUNTAS */
 .lado-izquierdo {
   width: 100%;
