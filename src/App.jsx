@@ -41,7 +41,7 @@ function App() {
           {" "}
           Obtuviste {puntuacion} de {preguntas.length}{" "}
         </span>
-        <button onClick={() => {window.location.href="/"}}>Volver a jugar</button>
+        <button onClick={() => {window.location.href="/quiz-app/"}}>Volver a jugar</button>
         <button onClick={() => {
           setIsFinished(false);
           setAnswersShown(true);
