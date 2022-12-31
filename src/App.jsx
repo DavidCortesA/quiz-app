@@ -51,39 +51,36 @@ function App() {
     </main>
   );
 
-  if(answersShown) return(
-    <main className="app">
-      <div classname="lado-izquierdo">
-        <div classname="numero-pregunta">
+  if(answersShown)
+    return(
+      <main className="app">
+        <div className="centro">
+          <div className="numero-pregunta">
+            <span>Pregunta {preguntaActual + 1} de</span> {preguntas.length}
+          </div>
+          <div className="titulo-pregunta">
+            {preguntas[preguntaActual].titulo}
+          </div>
+          <div>
+            {preguntas[preguntaActual].opciones.filter((opcion) => opcion.isCorrect)[0].textoRespuesta}
+          </div>
+          <button onClick={()=>{
+            if(preguntaActual == preguntas.length - 1){
+              window.location.href = "/quiz-app/";
+            }else{
+              setPreguntaActual(preguntaActual + 1);
+            }
+          }}>
+            {preguntaActual === preguntas.length - 1 ? 'Volver a jugar' : 'Continuar'}
+          </button>
         </div>
-        <div classname="titulo-pregunta">
-          <span>Pregunta {preguntaActual + 1} de</span> {preguntas.length}
-        </div>
-        <div classname="titulo-pregunta">
-          {preguntas[preguntaActual].titulo}
-        </div>
-        <div>
-          {preguntas[preguntaActual].opciones.filter((opcion) => opcion.isCorrect)[0].textoRespuesta}
-        </div>
-        <button onClick={()=>{
-          if(preguntaActual == preguntas.length - 1){
-            window.location.href = "/quiz-app/";
-          }else{
-            setPreguntaActual(preguntaActual + 1);
-          }
-        }}>
-          {preguntaActual === preguntas.length - 1 ? 'Volver a jugar' : 'Continuar'}
-        </button>
-      </div>
-    </main>
+      </main>
   );
   
   return (
     <main className="app">
       <div className="lado-izquierdo">
         <div className="numero-pregunta">
-        </div>
-        <div className="titulo-pregunta">
           <span>Pregunta {preguntaActual + 1} de</span> {preguntas.length}
         </div>
         <div className="titulo-pregunta">
@@ -93,7 +90,7 @@ function App() {
         :(<button onClick={()=>{
           setTiempoRestante(10) 
           setDisable(false)
-          setPreguntaActual(preguntaActual + 1)
+          preguntaActual == preguntas.length - 1 ? setIsFinished(true) : setPreguntaActual(preguntaActual + 1);
         }}>Continuar</button>)}
       </div>
       <div className="lado-derecho">

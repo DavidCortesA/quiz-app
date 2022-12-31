@@ -23,6 +23,7 @@ body {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
+  gap: 50px;
 }
 
 /* PREGUNTAS */
@@ -32,6 +33,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.centro {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .pregunta-numero {
@@ -71,7 +81,7 @@ button {
   border-radius: 15px;
   display: flex;
   padding: 5px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border: 5px solid #234668;
   cursor: pointer;
