@@ -1,11 +1,18 @@
 {
+  "homepage": "https://davidcortesa.github.io/quiz-app/",
+  "author": {
+    "name": "David Cortez",
+    "email": "david.cortes.ayala@hotmail.com"
+  },
   "name": "quiz-app",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predepoy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -15,6 +22,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "gh-pages": "^4.0.0",
     "vite": "^2.9.15"
   }
 }
