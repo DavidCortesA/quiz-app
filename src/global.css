@@ -5,7 +5,10 @@
 body {
   margin: 0;
   color: #fff;
-  background-color: #fcfcfc;
+  background-image: url('./img/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +22,7 @@ body {
   height: min-content;
   min-height: 200px;
   border-radius: 15px;
-  padding: 20px;
+  padding: 30px 50px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
@@ -44,12 +47,20 @@ body {
   align-items: center;
 }
 
+.numero-pregunta{
+  font-size: 26px;
+}
+
+.titulo-pregunta{
+  font-size: 24px;
+}
+
 .pregunta-numero {
   margin-bottom: 20px;
 }
 
 .pregunta-numero span {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .pregunta-titulo {
@@ -61,6 +72,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 
 /* FINALIZADO */
@@ -75,12 +87,12 @@ body {
 /* GRAL */
 button {
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   color: #ffffff;
   background-color: #252d4a;
   border-radius: 15px;
   display: flex;
-  padding: 5px;
+  padding: 10px 30px;
   justify-content: center;
   align-items: center;
   border: 5px solid #234668;
@@ -88,7 +100,7 @@ button {
 }
 
 .tiempo-restante {
-  font-size: 14px;
+  font-size: 16px;
   color: #fcbf3d;
   margin-bottom: 20px;
 }
