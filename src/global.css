@@ -12,13 +12,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 .app {
   background-color: #252d4a;
   max-width: 650px;
-  min-width: 450px;
+  min-width: 250px;
   height: min-content;
   min-height: 200px;
   border-radius: 15px;
@@ -26,19 +27,7 @@ body {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
-  gap: 50px;
-}
-
-@media (max-width: 750px) {
-  .app{
-    flex-direction: column;
-  }
-  .centro {
-    gap: 50px;
-  }
-  .juego-terminado, .lado-izquierdo{
-    gap:25px;
-  }
+  gap: 25px;
 }
 
 /* PREGUNTAS */
@@ -149,3 +138,26 @@ button:focus {
 button svg {
   margin-right: 5px;
 }
+
+/* MediaQuery */
+@media (max-width: 750px) {
+  .app{
+      flex-direction: column;
+      padding: 20px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    button{
+      padding: 10px;
+      font-size: 20px;
+    }
+    .centro {
+      gap: 50px;
+    }
+    .tiempo-restante{
+      font-size: 20px;
+    }
+    .juego-terminado, .lado-izquierdo{
+      gap:25px;
+    }
+  }
